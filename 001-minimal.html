@@ -1,0 +1,42 @@
+<h1 id="a-minimal-r-markdown-example">A minimal R Markdown example</h1>
+<p>A quote:</p>
+<blockquote>
+<p>Markdown is not LaTeX.</p>
+</blockquote>
+<p>To compile me, run this in R:</p>
+<pre><code>library(knitr)
+knit(&#39;001-minimal.Rmd&#39;)</code></pre>
+<p>See <a href="https://github.com/yihui/knitr-examples/blob/master/001-minimal.md">output here</a>.</p>
+<h2 id="code-chunks">code chunks</h2>
+<p>A <em>paragraph</em> here. A code chunk below (remember the three backticks):</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span> +<span class="st"> </span><span class="dv">1</span></code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="fl">0.4</span> -<span class="st"> </span><span class="fl">0.7</span> +<span class="st"> </span><span class="fl">0.3</span>  <span class="co"># what? it is not zero!</span></code></pre>
+<pre><code>## [1] 5.551e-17</code></pre>
+<h2 id="graphics">graphics</h2>
+<p>It is easy.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="dv">1</span>:<span class="dv">10</span>)</code></pre>
+<div class="figure">
+<img src="figure/unnamed-chunk-21.png" alt="plot of chunk unnamed-chunk-2" /><p class="caption">plot of chunk unnamed-chunk-2</p>
+</div>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(<span class="kw">rnorm</span>(<span class="dv">1000</span>))</code></pre>
+<div class="figure">
+<img src="figure/unnamed-chunk-22.png" alt="plot of chunk unnamed-chunk-2" /><p class="caption">plot of chunk unnamed-chunk-2</p>
+</div>
+<h2 id="inline-code">inline code</h2>
+<p>Yes I know the value of pi is 3.1416, and 2 times pi is 6.2832.</p>
+<h2 id="math">math</h2>
+<p>Sigh. You cannot live without math equations. OK, here we go: <span class="math"><em>α</em> + <em>β</em> = <em>γ</em></span>. Note this is not supported by native markdown. You probably want to try RStudio, or at least the R package <strong>markdown</strong>, or the function <code>knitr::knit2html()</code>.</p>
+<h2 id="nested-code-chunks">nested code chunks</h2>
+<p>You can write code within other elements, e.g. a list</p>
+<ol style="list-style-type: decimal">
+<li><p>foo is good</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">strsplit</span>(<span class="st">&quot;hello indented world&quot;</span>, <span class="st">&quot; &quot;</span>)[[<span class="dv">1</span>]]</code></pre>
+<pre><code>## [1] &quot;hello&quot;    &quot;indented&quot; &quot;world&quot;</code></pre></li>
+<li><p>bar is better</p></li>
+</ol>
+<h2 id="conclusion">conclusion</h2>
+<p>Nothing fancy. You are ready to go. When you become picky, go to the <a href="http://yihui.name/knitr/">knitr website</a>.</p>
+<div class="figure">
+<img src="http://yihui.name/knitr/images/knit-logo.png" alt="knitr logo" /><p class="caption">knitr logo</p>
+</div>
